@@ -38,16 +38,103 @@ header div h1 {
 }
 
 
+section {
+    margin-top: 3rem;
+}
+
+section .main {
+    width: max-content;
+    margin: 0 auto;
+}
+
+section .main .scoreboard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+section .scoreboard p {
+    font-size: 1.3rem;
+}
+
+section .scoreboard div {
+    display: grid;
+    text-align: center;
+    gap: 2rem;
+}
+
+section .scoreboard .weapon {
+    width: 12rem;
+    height: 12rem;
+    border-radius: 50%;
+    border: 2px dashed var(--primary-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section .scoreboard .weapon p {
+    font-size: 7rem;
+    margin-top: 1rem;
+}
+
+
 @media screen and (max-width: 568px) {
     header div h1 {
         font-size: 2.5rem;
         justify-content: space-between;
         gap: 0;
     }
+
+    section {
+        margin-top: 4.5rem;
+    }
+
+    section .main .scoreboard {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+    }
+
+    section .scoreboard p {
+        font-size: 1.2rem;
+    }
+
+    section .scoreboard .weapon {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    section .scoreboard .weapon p {
+        font-size: 6rem;
+    }
 }
 
 @media screen and (max-width: 378px) {
     header div h1 {
         font-size: 2rem;
+    }
+
+    section .main .scoreboard {
+        gap: 1.5rem;
+    }
+
+    section .main .scoreboard div {
+        gap: 1.5rem;
+    }
+
+    section .scoreboard p {
+        font-size: 1rem;
+    }
+
+    section .scoreboard .weapon {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    section .scoreboard .weapon p {
+        font-size: 4.5rem;
     }
 }
