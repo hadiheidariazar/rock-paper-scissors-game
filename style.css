@@ -1,0 +1,53 @@
+@font-face {
+    font-family: Dana;
+    src: url('font/DanaFaNum-Medium.woff2');
+}
+
+:root {
+    --primary-light: #eee;
+    --primary-dark: #222831;
+    --secondary-dark: #393e46;
+    --secondary-dark-hover: #4a4f57;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Dana;
+    background-color: var(--secondary-dark);
+    color: var(--primary-light);
+}
+
+header div {
+    background-color: var(--primary-dark);
+    text-align: center;
+    padding: 1rem;
+}
+
+header div h1 {
+    font-size: 3rem;
+    color: #f3c864;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+
+@media screen and (max-width: 568px) {
+    header div h1 {
+        font-size: 2.5rem;
+        justify-content: space-between;
+        gap: 0;
+    }
+}
+
+@media screen and (max-width: 378px) {
+    header div h1 {
+        font-size: 2rem;
+    }
+}
