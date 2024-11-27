@@ -4,6 +4,7 @@
 }
 
 :root {
+    --full-dark: #0d0e11;
     --primary-light: #eee;
     --primary-dark: #1a1e25;
     --secondary-dark: #252c35;
@@ -15,10 +16,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Dana;
 }
 
 body {
-    font-family: Dana;
     background-color: var(--secondary-dark);
     color: var(--primary-light);
 }
@@ -31,7 +32,7 @@ header div {
 
 header div h1 {
     font-size: 3rem;
-    color: #f3c864;
+    color: #e7b43c;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -95,7 +96,7 @@ section .buttons button {
     font-size: 5rem;
     width: 100%;
     height: 9rem;
-    padding-bottom: 0.9rem;
+    padding-top: 0.7rem;
     cursor: pointer;
     border-radius: .7rem;
     background-color: var(--secondary-dark-active);
@@ -105,6 +106,76 @@ section .buttons button {
 
 section .buttons button:hover {
     background-color: var(--secondary-dark-hover);
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    visibility: hidden;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-container {
+    background: var(--full-dark);
+    z-index: 10;
+    width: 16rem;
+    padding: 2rem 1rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    border-radius: 1rem;
+}
+
+.modal-container .title-modal {
+    text-align: center;
+}
+
+.modal-container button {
+    background: #ec9c06;
+    border: none;
+    padding: .7rem;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    color: var(--primary-light);
+    transition: .2s;
+    font-weight: 500;
+}
+
+.modal-container button:hover {
+    background: #cf8907;
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: #181b25c2;
+    width: 100%;
+    z-index: 9;
+}
+
+
+@keyframes modal {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    100% {
+        visibility: visible;
+        opacity: 1;
+    }
 }
 
 
@@ -147,7 +218,7 @@ section .buttons button:hover {
         font-size: 4rem;
         width: 100%;
         height: 7rem;
-        padding-bottom: 0.8rem;
+        padding-top: 0.6rem;
     }
 }
 
@@ -186,6 +257,11 @@ section .buttons button:hover {
         font-size: 3.5rem;
         width: 100%;
         height: 6rem;
-        padding-bottom: 0.6rem;
+        padding-top: 0.5rem;
+    }
+
+    .modal-container {
+        width: 80%;
+        margin: 0 auto;
     }
 }
