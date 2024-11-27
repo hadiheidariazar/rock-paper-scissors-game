@@ -2,22 +2,22 @@ const weaponsButtons = document.querySelectorAll('.buttons button')
 const weaponPlayer = document.querySelector('.player .weapon p')
 const weaponRobot = document.querySelector('.robot .weapon p')
 
-const weapons = {
-    0: 'کاغذ',
-    1: 'قیچی',
-    2: 'سنگ'
-}
+const weapons = [
+    {title: '✋', lose: '✌'},
+    {title: '✊', lose: '✋'},
+    {title: '✌', lose: '✊'}
+]
 
 weaponsButtons.forEach(button => {
     button.addEventListener('click', () => {
-        let robotWeapon = weapons[Number((Math.random() * 3).toFixed(0))]
-        
+        let robotWeapon = weapons[Math.ceil(Math.random() * weapons.length) - 1]
+
         weaponPlayer.innerHTML = ''
         weaponPlayer.innerHTML = button.innerHTML
 
-        if (robotWeapon === 'سنگ') {
+        if (robotWeapon.title === '✊') {
             weaponRobot.innerHTML = '✊'
-        } else if (robotWeapon === 'قیچی') {
+        } else if (robotWeapon.title === '✋') {
             weaponRobot.innerHTML = '✌'
         } else {
             weaponRobot.innerHTML = '✋'
