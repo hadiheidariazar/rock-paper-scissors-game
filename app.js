@@ -13,14 +13,7 @@ weaponsButtons.forEach(button => {
         let robotWeapon = weapons[Math.ceil(Math.random() * weapons.length) - 1]
 
         weaponPlayer.innerHTML = ''
-        weaponPlayer.innerHTML = button.innerHTML
-
-        if (robotWeapon.title === '✊') {
-            weaponRobot.innerHTML = '✊'
-        } else if (robotWeapon.title === '✋') {
-            weaponRobot.innerHTML = '✌'
-        } else {
-            weaponRobot.innerHTML = '✋'
-        }
+        weaponPlayer.innerHTML = button.value
+        weaponRobot.innerHTML = robotWeapon.title
     })
 })
